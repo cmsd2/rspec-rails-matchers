@@ -11,7 +11,7 @@ module RspecRailsMatchers
   autoload :Sugar,        'rspec_rails_matchers/sugar'
 end
 
-Rspec.configure do |c|
+RSpec.configure do |c|
   c.include RspecRailsMatchers::Validations
   c.include RspecRailsMatchers::Associations
   c.include RspecRailsMatchers::Behavior

@@ -2,7 +2,7 @@ module RspecRailsMatchers
   module Validations
     module UniquenessOf
       def validate_uniqueness_of(attribute, options = {})
-        Rspec::Matchers::Matcher.new :validate_uniqueness_of, attribute do |_attr_|
+        RSpec::Matchers::Matcher.new :validate_uniqueness_of, attribute do |_attr_|
           match do |model|
             duplicate = create_duplicate_record(model, _attr_, options[:scope])
 

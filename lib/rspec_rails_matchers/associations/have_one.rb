@@ -2,7 +2,7 @@ module RspecRailsMatchers
   module Associations
     module HaveOne
       def have_one(association)
-        Rspec::Matchers::Matcher.new :have_one, association do |_association_|
+        RSpec::Matchers::Matcher.new :have_one, association do |_association_|
           extend RspecRailsMatchers::Associations::Helpers
 
           match do |model|

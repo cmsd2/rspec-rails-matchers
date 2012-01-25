@@ -2,7 +2,7 @@ module RspecRailsMatchers
   module Validations
     module ConfirmationOf
       def validate_confirmation_of(attribute)
-        Rspec::Matchers::Matcher.new :validate_confirmation_of, attribute do |_attr_|
+        RSpec::Matchers::Matcher.new :validate_confirmation_of, attribute do |_attr_|
           match do |model|
             if model.respond_to?("#{_attr_}_confirmation=")
               model.send("#{_attr_}=", 'asdf')

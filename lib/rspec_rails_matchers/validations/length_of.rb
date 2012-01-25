@@ -6,7 +6,7 @@ module RspecRailsMatchers
           
         min, max = min_max_for(options)
         
-        Rspec::Matchers::Matcher.new :validate_length_of, attribute do |_attribute_|
+        RSpec::Matchers::Matcher.new :validate_length_of, attribute do |_attribute_|
           match do |model|
             validates_minimum?(model, min, _attribute_) && 
               validates_maximum?(model, max, _attribute_)

@@ -2,7 +2,7 @@ module RspecRailsMatchers
   module Associations
     module BelongTo
       def belong_to(association)
-        Rspec::Matchers::Matcher.new :belong_to, association do |_association_|
+        RSpec::Matchers::Matcher.new :belong_to, association do |_association_|
           extend RspecRailsMatchers::Associations::Helpers
 
           match do |model|
